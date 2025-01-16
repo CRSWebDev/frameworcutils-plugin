@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    _sectionRobots:
+        type: section
+        label: Nastavení robots.txt
+
+    robots_txt_mode:
+        label: robots.txt režim
+        type: balloon-selector
+        default: deny
+        options:
+            deny: Zakázat indexování
+            custom: Použít znění níže
+
+    robots_txt:
+        label: robots.txt
+        type: textarea
+        size: large
+        default: >
+            User-agent: *
+
+            Disallow: /admin/
+        trigger:
+            action: enable
+            field: robots_txt_mode
+            condition: value[custom]
+
+    _sectionRedirects:
+        type: section
+        label: Nastavení přesměrování URL
+        comment: "Formát zápisu: <code> <old_url> <new_url>. Příklad: 301 /contact /contact-us"
+
+    redirects:
+        label: &nbsp;
+        type: textarea
+        size: huge
+        placeholder: "301 https://example.com/contact https://example.com/contact-us"
+        comment: 301 - trvalé, 302 dočasné

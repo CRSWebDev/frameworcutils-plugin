@@ -103,7 +103,7 @@ class Plugin extends PluginBase
             'settings' => [
                 'label' => 'FWC Utils',
                 'description' => 'Nastavení webu jako robots.txt, redirecty atp...',
-                'category' => 'CATEGORY_CMS',
+                'category' => 'FrameworC',
                 'icon' => 'icon-safari',
                 'class' => \CRSCompany\FrameworCUtils\Models\UtilsSetting::class,
             ]

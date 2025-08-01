@@ -2,8 +2,9 @@
     "name": "crs-company/frameworcutils-plugin",
     "type": "october-plugin",
     "description": "No description provided yet...",
+    "license": "MIT",
     "require": {
         "composer/installers": "~1.0",
-        "october/rain": "~v3.5"
+        "october/rain": "~v4.0"
     }
 }
